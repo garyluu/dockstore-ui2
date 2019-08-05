@@ -33,6 +33,9 @@ externalConfig:
 
 authenticationCachePolicy: maximumSize=10000, expireAfterAccess=10m
 
+logging:
+  level: DEBUG
+
 database:
   # the name of your JDBC driver
   driverClass: org.postgresql.Driver
