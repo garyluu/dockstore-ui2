@@ -85,7 +85,7 @@ describe('Dockstore my tools', () => {
       selectUnpublishedTab('quay.io/A2');
       selectTool('b1');
       cy.contains('Versions').click();
-      cy.get('td').find('button').contains('button:visible', 'Edit').should('be.visible').click();
+      cy.get('td').find('button').contains('button:visible', 'Edit', {timeout: 20000}).click();
       cy.get('#addWDLField').type('/test.wdl.json');
       cy.get('#addCWLField').type('/test.cwl.json');
       cy.get('#saveVersionModal').click();
