@@ -11,7 +11,7 @@
     "webservice": "./scripts/run-webservice-script.sh",
     "prebuild": "ts-node -O '{\"module\":\"commonjs\"}' git.version.ts && ./scripts/generate-openapi-script.sh",
     "prebuild.prod": "npm run prebuild",
-    "build.prod": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build --progress false --prod",
+    "build.prod": "node --max_old_space_size=3500 node_modules/@angular/cli/bin/ng build --progress false --prod",
     "build": "npx ng build --progress false",
     "compodoc": "npx compodoc -p src/tsconfig.compodoc.json --output docs",
     "test": "npx ng test",
