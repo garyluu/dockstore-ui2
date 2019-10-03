@@ -13,8 +13,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-import { Client } from 'elasticsearch-browser';
-
+import { Client } from 'elasticsearch/src/lib/apis/5_6.js';
 import { ga4ghPath } from '../shared/constants';
 import { Dockstore } from './../shared/dockstore.model';
 
