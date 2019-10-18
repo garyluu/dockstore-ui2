@@ -33,7 +33,8 @@ describe('Dockstore my tools', () => {
   }
 
   function selectTool(tool: string) {
-    cy
+    cy.get('mat-list-item')
+      .should('be.visible')
       .contains('div .no-wrap', tool)
       .should('be.visible')
       .click();
@@ -214,6 +215,8 @@ describe('Dockstore my tools', () => {
       cy
         .get('#submitButton')
         .click();
+
+      cy.get('#submitButton').should('not.be.visible');
 
       // TODO: This is temporarily disabled
       // cy
