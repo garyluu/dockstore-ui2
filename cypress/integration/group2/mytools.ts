@@ -288,6 +288,8 @@ describe('Dockstore my tools', () => {
         });
       cy
         .get('#register_tool_button')
+        .should('be.visible')
+        .should('not.be.disabled')
         .click();
       // TODO: Fix this.  When 'Next' is clicked too fast, the next step is empty
       cy.wait(1000);
