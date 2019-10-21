@@ -288,6 +288,7 @@ describe('Dockstore my tools', () => {
         });
       cy
         .get('#register_tool_button')
+        .should('not.be.hidden')
         .should('be.visible')
         .should('not.be.disabled')
         .click();
