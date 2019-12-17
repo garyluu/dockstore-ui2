@@ -22,6 +22,7 @@ export enum WebserviceDescriptorTypeEnum {
   WDL = 'wdl',
   // DOCKSTORE-2428 - demo how to add new workflow language
   // SWL = 'swl',
+  GXFORMAT2 = 'GXFORMAT2',
   NFL = 'nfl',
   SERVICE = 'service'
 }
@@ -52,6 +53,8 @@ export class DescriptorTypeCompatService {
       return ToolDescriptor.TypeEnum.WDL;
     } else if (descriptorType.toUpperCase() === DescriptorTypeEnum.NFL) {
       return ToolDescriptor.TypeEnum.NFL;
+    } else if (descriptorType.toUpperCase() === DescriptorTypeEnum.Gxformat2) {
+      return ToolDescriptor.TypeEnum.GXFORMAT2;
     } else if (descriptorType.toUpperCase() === DescriptorTypeEnum.Service) {
       return ToolDescriptor.TypeEnum.SERVICE;
     }
@@ -81,6 +84,14 @@ export class DescriptorTypeCompatService {
       }
       case WebserviceDescriptorTypeEnum.SERVICE: {
         return ToolDescriptor.TypeEnum.SERVICE;
+      }
+
+      case DescriptorTypeEnum.Gxformat2: {
+        return ToolDescriptor.TypeEnum.GXFORMAT2;
+      }
+      case ToolDescriptor.TypeEnum.GXFORMAT2: {
+        console.log('Unneeded conversion');
+        return ToolDescriptor.TypeEnum.GXFORMAT2;
       }
 
       // DOCKSTORE-2428 - demo how to add new workflow language
@@ -113,6 +124,8 @@ export class DescriptorTypeCompatService {
         return 'PLAIN-CWL';
       case ToolDescriptor.TypeEnum.NFL:
         return 'PLAIN-NFL';
+      case ToolDescriptor.TypeEnum.GXFORMAT2:
+        return 'PLAIN-GXFORMAT2';
       case ToolDescriptor.TypeEnum.SERVICE:
         return 'PLAIN-SERVICE';
       default:

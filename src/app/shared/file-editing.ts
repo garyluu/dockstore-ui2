@@ -57,6 +57,7 @@ export class FileEditing extends Files {
         sourcefile.type === SourceFile.TypeEnum.NEXTFLOWCONFIG ||
         // DOCKSTORE-2428 - demo how to add new workflow language
         // sourcefile.type === SourceFile.TypeEnum.DOCKSTORESWL ||
+        sourcefile.type === SourceFile.TypeEnum.DOCKSTOREGXFORMAT2 ||
         sourcefile.type === SourceFile.TypeEnum.NEXTFLOW
     );
   }
@@ -71,6 +72,7 @@ export class FileEditing extends Files {
       sourcefile =>
         sourcefile.type === SourceFile.TypeEnum.WDLTESTJSON ||
         sourcefile.type === SourceFile.TypeEnum.CWLTESTJSON ||
+        sourcefile.type === SourceFile.TypeEnum.GXFORMAT2TESTFILE ||
         // DOCKSTORE-2428 - demo how to add new workflow language
         // sourcefile.type === SourceFile.TypeEnum.SWLTESTJSON ||
         sourcefile.type === SourceFile.TypeEnum.NEXTFLOWTESTPARAMS

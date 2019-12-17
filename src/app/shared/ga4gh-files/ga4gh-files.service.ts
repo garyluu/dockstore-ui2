@@ -45,6 +45,7 @@ export class GA4GHFilesService {
       descriptorTypes = [
         ToolDescriptor.TypeEnum.CWL,
         ToolDescriptor.TypeEnum.WDL,
+        ToolDescriptor.TypeEnum.GXFORMAT2,
         // DOCKSTORE-2428 - demo how to add new workflow language
         // ToolDescriptor.TypeEnum.SWL,
         ToolDescriptor.TypeEnum.NFL
