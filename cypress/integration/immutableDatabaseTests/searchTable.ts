@@ -51,7 +51,7 @@ describe('Dockstore tool/workflow search table', () => {
 
     cy.visit('/search');
     if (type === 'workflow') {
-      cy.get('#workflowTab-link')
+      cy.get('[data-cy=workflows-tab]')
         .click();
     }
     cy.get('.mat-icon.star')
